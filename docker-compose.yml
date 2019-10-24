@@ -22,6 +22,8 @@ services:
       - postgres_password
 
   appserver:
+    labels:
+      shipyard.route: '/'
     build:
        context: app
        dockerfile: Dockerfile
